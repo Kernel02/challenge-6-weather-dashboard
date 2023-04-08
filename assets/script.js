@@ -36,7 +36,7 @@ function searchHandler(event) {
 }
 function setRequestCityUrl() {
   const cityUrl =
-    "http://api.openweathermap.org/geo/1.0/direct?q=" +
+    "https://api.openweathermap.org/geo/1.0/direct?q=" +
     city +
     "&limit=1&appid=c6556a496e3f62f9fdb73f2b66369ef4";
   $.ajax({
@@ -55,7 +55,7 @@ function setRequestCityUrl() {
 }
 function setRequestWeatherUrl() {
   const weatherUrl =
-    "http://api.openweathermap.org/data/2.5/forecast?lat=" +
+    "https://api.openweathermap.org/data/2.5/forecast?lat=" +
     lat +
     "&lon=" +
     lon +
