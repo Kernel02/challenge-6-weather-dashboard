@@ -17,28 +17,36 @@
     <header>
       <h1 class="text-center">Weather Dashboard</h1>
     </header>
-    <main class="d-flex flex-row">
-      <form id="search" class="d-flex flex-column col-3">
-        <label>Search for a City</label>
-        <input type="text" />
-        <button>Search</button>
-      </form>
+    <main class="d-flex flex-row justify-content-evenly">
+      <div class="col-2">
+        <form id="search" class="d-flex flex-column">
+          <label>Search for a City</label>
+          <input id="cityInput" type="text" placeholder="City" />
+          <button id="searchBtn">Search</button>
+        </form>
+        <div
+          id="buttons"
+          class="d-flex flex-column justify-content-center"
+        ></div>
+      </div>
       <div id="forecast" class="col-9">
         <div id="weatherToday">
           <div class="card">
-            <div class="card-header">City - Date</div>
+            <div id="cityDate" class="card-header">City - Date</div>
+            <img id="todayIcon">
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">Temperature:</li>
-              <li class="list-group-item">Wind:</li>
-              <li class="list-group-item">Humidity:</li>
+              <li id="todayTemp" class="list-group-item">Temperature:</li>
+              <li id="todayWind" class="list-group-item">Wind:</li>
+              <li id="todayHumidity" class="list-group-item">Humidity:</li>
             </ul>
           </div>
         </div>
-        <div id="weatherFuture">
+        <div>
           <h5>5-Day Forecast:</h5>
-          <div class="d-flex flex-row justify-content-evenly">
+          <div  id="weatherFuture" class="d-flex flex-row justify-content-evenly">
             <div class="card">
               <div class="card-header">City - Date</div>
+              <img>
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">Temperature:</li>
                 <li class="list-group-item">Wind:</li>
@@ -47,6 +55,7 @@
             </div>
             <div class="card">
               <div class="card-header">City - Date</div>
+              <img>
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">Temperature:</li>
                 <li class="list-group-item">Wind:</li>
@@ -55,6 +64,7 @@
             </div>
             <div class="card">
               <div class="card-header">City - Date</div>
+              <img>
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">Temperature:</li>
                 <li class="list-group-item">Wind:</li>
@@ -63,6 +73,7 @@
             </div>
             <div class="card">
               <div class="card-header">City - Date</div>
+              <img>
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">Temperature:</li>
                 <li class="list-group-item">Wind:</li>
@@ -71,11 +82,27 @@
             </div>
             <div class="card">
               <div class="card-header">City - Date</div>
+              <img>
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">Temperature:</li>
                 <li class="list-group-item">Wind:</li>
                 <li class="list-group-item">Humidity:</li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="noCity" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Please Input an accurate City.</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Examples: Richmond, Orlando, Las Vegas, etc.</p>
             </div>
           </div>
         </div>

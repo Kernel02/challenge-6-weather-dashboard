@@ -1,0 +1,10 @@
+#forecast {
+    display: none;
+}
+#buttons button{
+    margin-top: 10px;
+    width: fit-content;
+}
+img {
+    max-width: fit-content;
+}
